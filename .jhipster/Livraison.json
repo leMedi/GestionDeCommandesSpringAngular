@@ -1,0 +1,26 @@
+{
+    "name": "Livraison",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "commande",
+            "otherEntityName": "commande",
+            "otherEntityField": "date"
+        }
+    ],
+    "changelogDate": "20181222192551",
+    "entityTableName": "livraison",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

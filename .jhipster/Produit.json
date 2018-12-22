@@ -1,0 +1,35 @@
+{
+    "name": "Produit",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "quantite",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "prix",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "commande",
+            "otherEntityName": "commande",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "produit"
+        }
+    ],
+    "changelogDate": "20181222192549",
+    "entityTableName": "produit",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,30 @@
+{
+    "name": "Facture",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "montant",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "commande",
+            "otherEntityName": "commande",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181222192550",
+    "entityTableName": "facture",
+    "dto": "no",
+    "pagination": "pager",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
