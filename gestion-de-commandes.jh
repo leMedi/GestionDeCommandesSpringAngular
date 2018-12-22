@@ -1,0 +1,42 @@
+entity Client {
+    nom String,
+    prenom String,
+    adresse String,
+    telephone Long,
+}
+
+entity Commande {
+    date Instant
+}
+
+entity Produit {
+    nom String,
+    quantite Long,
+    prix Double
+}
+
+entity Facture {
+    date Instant,
+    montant Double
+}
+
+entity Livraison {
+    date Instant,
+}
+
+relationship ManyToMany {
+	Commande{produit(nom)} to Produit{commande}
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Client to Commande{client(nom)},
+    Commande to Facture,
+	Commande{livraison(date)} to Livraison{commande(date)},
+}
+
+// Set pagination options
+paginate Client with infinite-scroll
+paginate Produit with infinite-scroll
+paginate Commande with pagination
+paginate Facture with pager
