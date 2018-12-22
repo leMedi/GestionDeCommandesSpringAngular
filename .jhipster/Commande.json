@@ -1,0 +1,46 @@
+{
+    "name": "Commande",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "facture",
+            "otherEntityName": "facture",
+            "otherEntityRelationshipName": "commande"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "livraison",
+            "otherEntityName": "livraison",
+            "otherEntityRelationshipName": "commande"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "commande",
+            "relationshipName": "produit",
+            "otherEntityName": "produit",
+            "otherEntityField": "nom",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "client",
+            "otherEntityName": "client",
+            "otherEntityField": "nom"
+        }
+    ],
+    "changelogDate": "20181222192548",
+    "entityTableName": "commande",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
